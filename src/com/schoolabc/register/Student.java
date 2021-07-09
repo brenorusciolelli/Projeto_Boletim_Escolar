@@ -1,4 +1,4 @@
-package school;
+package com.schoolabc.register;
 
 import java.io.Serializable;
 

@@ -1,4 +1,4 @@
-package school;
+package com.schoolabc.register;
 
 import java.io.Serializable;
 
@@ -9,6 +9,7 @@ public class Discipline implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	private Integer code;
 	private String name;
 	private String initials;
 	private Professor professor;
@@ -17,9 +18,11 @@ public class Discipline implements Serializable {
 		
 	}
 
-	public Discipline(String name, String initials) {
+	public Discipline(Integer code, String name, String initials, Professor professor) {
+		this.code = code;
 		this.name = name;
 		this.initials = initials;
+		this.professor = professor;
 	}
 
 	public String getName() {
@@ -44,6 +47,14 @@ public class Discipline implements Serializable {
 
 	public void setProfessor(Professor professor) {
 		this.professor = professor;
+	}
+
+	public Integer getCode() {
+		return code;
+	}
+
+	public void setCode(Integer code) {
+		this.code = code;
 	}
 	
 	

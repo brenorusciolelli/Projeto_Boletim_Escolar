@@ -1,7 +1,9 @@
-package school;
+package com.schoolabc.bulletin;
 
 import java.io.Serializable;
 import java.util.List;
+
+import com.schoolabc.register.Student;
 
 public class Report implements Serializable {
 	/**
@@ -12,15 +14,16 @@ public class Report implements Serializable {
 	
 	private Integer year;
 	private String school;
+	private Student student;
 	private List<DisciplineBulletin> disciplines;
-	private List<BulletinNote> notes;
+	
 	
 	public Report() {
 		
 	}
 	
 	public Report(Integer year, String school) {
-		this.year = year;
+		this.setYear(year);
 		this.school = school;
 	}
 
@@ -39,12 +42,20 @@ public class Report implements Serializable {
 		this.disciplines = disciplines;
 	}
 
-	public List<BulletinNote> getNotes() {
-		return notes;
+	public Student getStudent() {
+		return student;
 	}
 
-	public void setNotes(List<BulletinNote> notes) {
-		this.notes = notes;
+	public void setStudent(Student student) {
+		this.student = student;
+	}
+
+	public Integer getYear() {
+		return year;
+	}
+
+	public void setYear(Integer year) {
+		this.year = year;
 	}
 
 }
